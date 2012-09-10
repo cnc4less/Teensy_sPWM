@@ -25,6 +25,10 @@ struct PWM_pin {
 	char port;
 	char pin;
 	uint8_t pwmPercent;
+	/*TODO: replace pwmPercent with a boolean val that represents whether the 
+	loop needs to do anything with it. Faster than checking greater/less than 
+	values for pwmPercent. If we need to retrieve the PWM value of a given pin,
+	we can calculate it on the fly from other values here. */
 	long int usOn;
 	long int usOff;
 	long int usOnRemaining;
@@ -196,6 +200,30 @@ int set_pin_PWM(char port, char pin, uint8_t pwmPercent)
 	return 0;
 }
 
+int set_pin_PWM_normalized(char port, char pin, float normPwm)
+{
+	if (normPwm < 0 || normPwm > 1.0)
+		return 0; //invalid percentage yo!
+	
+	if (port < 'A' || port > 'F')
+		return 0;
+		
+	if (pin < 0 || pin > 7)
+		return 0;
+		
+	uint8_t i = 0;
+	for (i = 0; i <= 25; i++)
+	{
+		if (teensyPin[i].port == port && teensyPin[i].pin == pin)
+		{
+			set_abstract_pin_PWM_normalized(i, normPwm);
+			return 1;
+		}
+	}
+	
+	return 0;
+}
+
 int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent)
 {
 	if (pwmPercent < 0 || pwmPercent > 100)
@@ -205,11 +233,29 @@ int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent)
 	float pwmDec;
 	pwmDec = (float)pwmPercent / 100;
 	
-	calculate_PWM_timing(pin, pwmDec);
+	set_PWM_values(pin, pwmDec);
 	
 	if (pwmPercent == 0)
 		set_pin(teensyPin[pin].port, teensyPin[pin].pin, 0);
 	else if (pwmPercent == 100)
+		set_pin(teensyPin[pin].port, teensyPin[pin].pin, 1);
+		
+	return 1;
+}
+
+int set_abstract_pin_PWM_normalized(uint8_t pin, float normPwm)
+{
+	if (normPwm < 0.0 || normPwm > 1.0)
+		return 0; //invalid pwm value!
+
+	if (pin < 0 || pin > 25)
+		return 0;
+		
+	set_PWM_values(pin, normPwm);
+	
+	if (normPwm == 0.0)
+		set_pin(teensyPin[pin].port, teensyPin[pin].pin, 0);
+	else if (normPwm == 1.0)
 		set_pin(teensyPin[pin].port, teensyPin[pin].pin, 1);
 		
 	return 1;
@@ -247,7 +293,7 @@ static int set_pin(char charport, uint8_t pin, uint8_t val)
 	return 1;
 }
 
-static int calculate_PWM_timing(int abstractPin, float pwmDec)
+static int set_PWM_values(uint8_t abstractPin, float pwmDec)
 {
 	if (pwmDec < 0.0 || pwmDec > 1.0)
 		return 0; //invalid pwm value!
@@ -258,10 +304,10 @@ static int calculate_PWM_timing(int abstractPin, float pwmDec)
 	teensyPin[abstractPin].pwmPercent = pwmDec * 100; /*TODO: edit this when 
 	pwmPercent is changed to a float. */
 	
-	teensyPin[pin].usOn = usPulseLength * pwmDec;
-	teensyPin[pin].usOff = usPulseLength - teensyPin[pin].usOn;
-	teensyPin[pin].usOnRemaining = teensyPin[pin].usOn;
-	teensyPin[pin].usOffRemaining = teensyPin[pin].usOff;
+	teensyPin[abstractPin].usOn = usPulseLength * pwmDec;
+	teensyPin[abstractPin].usOff = usPulseLength - teensyPin[abstractPin].usOn;
+	teensyPin[abstractPin].usOnRemaining = teensyPin[abstractPin].usOn;
+	teensyPin[abstractPin].usOffRemaining = teensyPin[abstractPin].usOff;
 	
 	return 1;
 }

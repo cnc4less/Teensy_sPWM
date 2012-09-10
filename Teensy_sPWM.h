@@ -39,7 +39,7 @@ int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent);
 
 pin: Should be an int between 0 and 25 (inclusive).
 normPwm: Should be an float between 0.0 and 1.0 (inclusive). */
-int set_abstract_pin_PWM(uint8_t pin, float normPwm);
+int set_abstract_pin_PWM_normalized(uint8_t pin, float normPwm);
 
 /* Sets a pin high or low. 
 
@@ -54,4 +54,4 @@ outputPin.
 abstractPin: Should be a value representing a Teensy 2.0 pin from 0 to 25.
 pwmDec: Should be a float between 0.0 and 1.0 representing PWM value. Multiply
 this value by 100 for equivalent PWM percentage. */
-static int calculate_PWM_timing(int abstractPin, float pwmDec);
+static int set_PWM_values(uint8_t abstractPin, float pwmDec);
