@@ -48,13 +48,14 @@ int main(void)
 		set_pin('B', 1, 1);
 		
 	set_abstract_pin_PWM(0, 25);
-	set_abstract_pin_PWM(1, 100);
-	set_abstract_pin_PWM(23, 15);
+	set_pin_PWM('B', 1, 15);
+	set_pin_PWM('F', 0, 5);
+	//set_abstract_pin_PWM(23, 15);
 	
 	//performance testing, remove this
-	int i = 0;
+	/* int i = 0;
 	for (i = 2; i < 23; i++)
-		set_abstract_pin_PWM(i, 25);
+		set_abstract_pin_PWM(i, 25); */
 	
 	while (1)
 	{
@@ -144,7 +145,6 @@ void PWM_loop(void)
 	endTime = micros();
 	deltaTime = endTime - startTime;
 	startTime = endTime;
-	//phex16(deltaTime);
 	
 	int i = 0;
 	for (i = 0; i <= 25; i++)
@@ -172,13 +172,36 @@ void PWM_loop(void)
 	}
 }
 
+int set_pin_PWM(char port, char pin, uint8_t pwmPercent)
+{
+	if (pwmPercent < 0 || pwmPercent > 100)
+		return 0; //invalid percentage yo!
+	
+	if (port < 'A' || port > 'F')
+		return 0;
+		
+	if (pin < 0 || pin > 7)
+		return 0;
+		
+	uint8_t i = 0;
+	for (i = 0; i <= 25; i++)
+	{
+		if (teensyPin[i].port == port && teensyPin[i].pin == pin)
+		{
+			set_abstract_pin_PWM(i, pwmPercent);
+			return 1;
+		}
+	}
+	
+	return 0;
+}
+
 int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent)
 {
 	if (pwmPercent < 0 || pwmPercent > 100)
 		return 0; //invalid percentage yo!
 
 	teensyPin[pin].pwmPercent = pwmPercent;
-	
 	/*TODO: using a float here because it's easier for now. Do maths and use 
 	ints later because they're faster. */
 	float pwmDec;

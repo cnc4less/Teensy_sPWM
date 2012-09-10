@@ -20,7 +20,7 @@ void PWM_loop(void);
 port: Should be a character between A and F (inclusive).
 pin: Should be an int between 0 and 7 (inclusive).
 pwmPercent: Should be an int between 0 and 100 (inclusive). */
-int set_pin_PWM(char port, uint8_t pin, uint8_t pwmPercent);
+int set_pin_PWM(char port, char pin, uint8_t pwmPercent);
 
 /* Sets the PWM value for a given abstracted pin. 
 
