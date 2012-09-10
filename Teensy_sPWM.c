@@ -205,10 +205,7 @@ int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent)
 	float pwmDec;
 	pwmDec = (float)pwmPercent / 100;
 	
-	teensyPin[pin].usOn = usPulseLength * pwmDec;
-	teensyPin[pin].usOff = usPulseLength - teensyPin[pin].usOn;
-	teensyPin[pin].usOnRemaining = teensyPin[pin].usOn;
-	teensyPin[pin].usOffRemaining = teensyPin[pin].usOff;
+	calculate_PWM_timing(pin, pwmDec);
 	
 	if (pwmPercent == 0)
 		set_pin(teensyPin[pin].port, teensyPin[pin].pin, 0);

@@ -22,11 +22,24 @@ pin: Should be an int between 0 and 7 (inclusive).
 pwmPercent: Should be an int between 0 and 100 (inclusive). */
 int set_pin_PWM(char port, char pin, uint8_t pwmPercent);
 
+/* Sets the PWM value for a given pin. 
+
+port: Should be a character between A and F (inclusive).
+pin: Should be an int between 0 and 7 (inclusive).
+normPwm: Should be a float between 0.0 and 1.0 (inclusive). */
+int set_pin_PWM_normalized(char port, char pin, float normPwm);
+
 /* Sets the PWM value for a given abstracted pin. 
 
 pin: Should be an int between 0 and 25 (inclusive).
 pwmPercent: Should be an int between 0 and 100 (inclusive). */
 int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent);
+
+/* Sets the PWM value for a given abstracted pin. 
+
+pin: Should be an int between 0 and 25 (inclusive).
+normPwm: Should be an float between 0.0 and 1.0 (inclusive). */
+int set_abstract_pin_PWM(uint8_t pin, float normPwm);
 
 /* Sets a pin high or low. 
 
