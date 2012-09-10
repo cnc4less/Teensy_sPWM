@@ -1,0 +1,792 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+                              Teensy_sPWM.o (__divsf3)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o) (__divsf3x)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                              Teensy_sPWM.o (__fixsfsi)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o) (__fixunssfsi)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                              Teensy_sPWM.o (__floatunsisf)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o) (__fp_inf)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o) (__fp_nan)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o) (__fp_pscA)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o) (__fp_pscB)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o) (__fp_round)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o) (__fp_split3)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o) (__fp_zero)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                              Teensy_sPWM.o (__mulsf3)
+/usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o) (__mulsf3x)
+/usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+                              Teensy_sPWM.o (__divmodsi4)
+/usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o (exit)
+/usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+                              Teensy_sPWM.o (__do_copy_data)
+/usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+                              Teensy_sPWM.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_udivmodsi4.o)
+                              /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o) (__udivmodsi4)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+ .text          0x0000000000000000        0x0 Teensy_sPWM.o
+ .data          0x0000000000000000        0x0 Teensy_sPWM.o
+ .text          0x0000000000000000        0x0 Arduino/wiring.o
+ .data          0x0000000000000000        0x0 Arduino/wiring.o
+ .text.millis   0x0000000000000000       0x1c Arduino/wiring.o
+ .text.delay    0x0000000000000000       0xb2 Arduino/wiring.o
+ .text.delayMicroseconds
+                0x0000000000000000       0x14 Arduino/wiring.o
+ .text          0x0000000000000000        0x0 usb_debug_only.o
+ .data          0x0000000000000000        0x0 usb_debug_only.o
+ .text.usb_configured
+                0x0000000000000000        0x6 usb_debug_only.o
+ .text.usb_debug_flush_output
+                0x0000000000000000       0x2e usb_debug_only.o
+ .text          0x0000000000000000        0x0 print.o
+ .data          0x0000000000000000        0x0 print.o
+ .bss           0x0000000000000000        0x0 print.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_udivmodsi4.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000020000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+LOAD Teensy_sPWM.o
+LOAD Arduino/wiring.o
+LOAD usb_debug_only.o
+LOAD print.o
+LOAD /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a
+LOAD /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a
+LOAD /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libc.a
+LOAD /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000      0xf46
+ *(.vectors)
+ .vectors       0x0000000000000000       0xac /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000000000000ac        0x9 Teensy_sPWM.o
+ .progmem.data  0x00000000000000b5       0xbc usb_debug_only.o
+                0x0000000000000172                . = ALIGN (0x2)
+ *fill*         0x0000000000000171        0x1 00
+                0x0000000000000172                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000172        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000172                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000000000000172                __ctors_start = .
+ *(.ctors)
+                0x0000000000000172                __ctors_end = .
+                0x0000000000000172                __dtors_start = .
+ *(.dtors)
+                0x0000000000000172                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000000000000172        0x0 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+                0x0000000000000172                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000000000000172        0xc /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000000017e       0x16 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+                0x000000000000017e                __do_copy_data
+ .init4         0x0000000000000194       0x10 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+                0x0000000000000194                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000001a4        0x4 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000001a8        0x2 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+                0x00000000000001a8                __vector_38
+                0x00000000000001a8                __vector_22
+                0x00000000000001a8                __vector_28
+                0x00000000000001a8                __vector_1
+                0x00000000000001a8                __vector_32
+                0x00000000000001a8                __vector_34
+                0x00000000000001a8                __vector_24
+                0x00000000000001a8                __vector_12
+                0x00000000000001a8                __bad_interrupt
+                0x00000000000001a8                __vector_6
+                0x00000000000001a8                __vector_31
+                0x00000000000001a8                __vector_35
+                0x00000000000001a8                __vector_39
+                0x00000000000001a8                __vector_3
+                0x00000000000001a8                __vector_30
+                0x00000000000001a8                __vector_25
+                0x00000000000001a8                __vector_13
+                0x00000000000001a8                __vector_17
+                0x00000000000001a8                __vector_19
+                0x00000000000001a8                __vector_7
+                0x00000000000001a8                __vector_41
+                0x00000000000001a8                __vector_27
+                0x00000000000001a8                __vector_5
+                0x00000000000001a8                __vector_33
+                0x00000000000001a8                __vector_37
+                0x00000000000001a8                __vector_4
+                0x00000000000001a8                __vector_9
+                0x00000000000001a8                __vector_2
+                0x00000000000001a8                __vector_21
+                0x00000000000001a8                __vector_15
+                0x00000000000001a8                __vector_36
+                0x00000000000001a8                __vector_29
+                0x00000000000001a8                __vector_40
+                0x00000000000001a8                __vector_8
+                0x00000000000001a8                __vector_26
+                0x00000000000001a8                __vector_14
+                0x00000000000001a8                __vector_16
+                0x00000000000001a8                __vector_18
+                0x00000000000001a8                __vector_20
+                0x00000000000001a8                __vector_42
+                0x00000000000001aa                . = ALIGN (0x2)
+ *(.text.*)
+ .text.set_pin  0x00000000000001aa       0x62 Teensy_sPWM.o
+ .text.set_abstract_pin_PWM
+                0x000000000000020c       0xf6 Teensy_sPWM.o
+                0x000000000000020c                set_abstract_pin_PWM
+ .text.PWM_loop
+                0x0000000000000302      0x130 Teensy_sPWM.o
+                0x0000000000000302                PWM_loop
+ .text.PWM_init
+                0x0000000000000432      0x164 Teensy_sPWM.o
+                0x0000000000000432                PWM_init
+ .text.main     0x0000000000000596       0x36 Teensy_sPWM.o
+                0x0000000000000596                main
+ .text.__vector_23
+                0x00000000000005cc       0x90 Arduino/wiring.o
+                0x00000000000005cc                __vector_23
+ .text.micros   0x000000000000065c       0x4c Arduino/wiring.o
+                0x000000000000065c                micros
+ .text.init     0x00000000000006a8       0xc0 Arduino/wiring.o
+                0x00000000000006a8                init
+ .text.usb_init
+                0x0000000000000768       0x2e usb_debug_only.o
+                0x0000000000000768                usb_init
+ .text.usb_debug_putchar
+                0x0000000000000796       0x8c usb_debug_only.o
+                0x0000000000000796                usb_debug_putchar
+ .text.__vector_10
+                0x0000000000000822       0x80 usb_debug_only.o
+                0x0000000000000822                __vector_10
+ .text.__vector_11
+                0x00000000000008a2      0x2b6 usb_debug_only.o
+                0x00000000000008a2                __vector_11
+ .text.phex1    0x0000000000000b58       0x10 print.o
+                0x0000000000000b58                phex1
+ .text.phex     0x0000000000000b68       0x14 print.o
+                0x0000000000000b68                phex
+ .text.phex16   0x0000000000000b7c       0x10 print.o
+                0x0000000000000b7c                phex16
+ .text.print_P  0x0000000000000b8c       0x28 print.o
+                0x0000000000000b8c                print_P
+ .text.avr-libc.fplib
+                0x0000000000000bb4        0x4 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+                0x0000000000000bb4                __divsf3
+ .text.avr-libc.fplib
+                0x0000000000000bb8       0xcc /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                0x0000000000000bce                __divsf3x
+                0x0000000000000bd2                __divsf3_pse
+ .text.avr-libc.fplib
+                0x0000000000000c84        0xa /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                0x0000000000000c84                __fixsfsi
+ .text.avr-libc.fplib
+                0x0000000000000c8e       0x58 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                0x0000000000000c8e                __fixunssfsi
+ .text.avr-libc.fplib
+                0x0000000000000ce6       0x7a /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                0x0000000000000ce6                __floatunsisf
+                0x0000000000000cea                __floatsisf
+ .text.avr-libc.fplib
+                0x0000000000000d60        0xc /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                0x0000000000000d60                __fp_inf
+ .text.avr-libc.fplib
+                0x0000000000000d6c        0x6 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                0x0000000000000d6c                __fp_nan
+ .text.avr-libc.fplib
+                0x0000000000000d72        0xe /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                0x0000000000000d72                __fp_pscA
+ .text.avr-libc.fplib
+                0x0000000000000d80        0xe /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                0x0000000000000d80                __fp_pscB
+ .text.avr-libc.fplib
+                0x0000000000000d8e       0x22 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+                0x0000000000000d8e                __fp_round
+ .text.avr-libc.fplib
+                0x0000000000000db0       0x44 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x0000000000000db0                __fp_split3
+                0x0000000000000dc0                __fp_splitA
+ .text.avr-libc.fplib
+                0x0000000000000df4        0xe /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x0000000000000df4                __fp_zero
+                0x0000000000000df6                __fp_szero
+ .text.avr-libc.fplib
+                0x0000000000000e02        0x4 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                0x0000000000000e02                __mulsf3
+ .text.avr-libc.fplib
+                0x0000000000000e06       0xc2 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                0x0000000000000e1a                __mulsf3x
+                0x0000000000000e1e                __mulsf3_pse
+ .text.libgcc   0x0000000000000ec8       0x36 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+                0x0000000000000ec8                __divmodsi4
+ .text.libgcc   0x0000000000000efe       0x44 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000000efe                __udivmodsi4
+                0x0000000000000f42                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000000f42        0x0 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+                0x0000000000000f42                exit
+                0x0000000000000f42                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000000f42        0x4 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000000f46                _etext = .
+
+.data           0x0000000000800100        0x0 load address 0x0000000000000f46
+                0x0000000000800100                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0000000000800100                . = ALIGN (0x2)
+                0x0000000000800100                _edata = .
+                0x0000000000800100                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800100      0x20a
+                0x0000000000800100                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800100      0x1fe Teensy_sPWM.o
+ .bss           0x00000000008002fe        0x9 Arduino/wiring.o
+                0x00000000008002fe                timer0_overflow_count
+                0x0000000000800302                timer0_millis
+ .bss           0x0000000000800307        0x3 usb_debug_only.o
+ *(.bss*)
+ *(COMMON)
+                0x000000000080030a                PROVIDE (__bss_end, .)
+                0x0000000000000f46                __data_load_start = LOADADDR (.data)
+                0x0000000000000f46                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x000000000080030a        0x0
+                0x000000000080030a                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x000000000080030a                PROVIDE (__noinit_end, .)
+                0x000000000080030a                _end = .
+                0x000000000080030a                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000     0x1c20
+ *(.stab)
+ .stab          0x0000000000000000      0x6b4 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+ .stab          0x00000000000006b4       0x48 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+                                         0x54 (size before relaxing)
+ .stab          0x00000000000006fc      0x510 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                        0x51c (size before relaxing)
+ .stab          0x0000000000000c0c       0x6c /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                                         0x78 (size before relaxing)
+ .stab          0x0000000000000c78      0x240 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                                        0x24c (size before relaxing)
+ .stab          0x0000000000000eb8      0x318 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                                        0x324 (size before relaxing)
+ .stab          0x00000000000011d0       0x78 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                                         0x84 (size before relaxing)
+ .stab          0x0000000000001248       0x54 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                                         0x60 (size before relaxing)
+ .stab          0x000000000000129c       0x84 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                                         0x90 (size before relaxing)
+ .stab          0x0000000000001320       0x84 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                                         0x90 (size before relaxing)
+ .stab          0x00000000000013a4       0xfc /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+                                        0x108 (size before relaxing)
+ .stab          0x00000000000014a0      0x1d4 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                                        0x1e0 (size before relaxing)
+ .stab          0x0000000000001674       0x90 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                                         0x9c (size before relaxing)
+ .stab          0x0000000000001704       0x48 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                         0x54 (size before relaxing)
+ .stab          0x000000000000174c      0x4d4 /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                        0x4e0 (size before relaxing)
+
+.stabstr        0x0000000000000000      0x2dc
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0x2dc /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x108
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x40 Teensy_sPWM.o
+ .debug_aranges
+                0x0000000000000040       0x48 Arduino/wiring.o
+ .debug_aranges
+                0x0000000000000088       0x48 usb_debug_only.o
+ .debug_aranges
+                0x00000000000000d0       0x38 print.o
+
+.debug_pubnames
+                0x0000000000000000      0x19a
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x0000000000000000       0x4e Teensy_sPWM.o
+ .debug_pubnames
+                0x000000000000004e       0x8d Arduino/wiring.o
+ .debug_pubnames
+                0x00000000000000db       0x83 usb_debug_only.o
+ .debug_pubnames
+                0x000000000000015e       0x3c print.o
+
+.debug_info     0x0000000000000000      0xe51
+ *(.debug_info)
+ .debug_info    0x0000000000000000      0x3e5 Teensy_sPWM.o
+ .debug_info    0x00000000000003e5      0x31d Arduino/wiring.o
+ .debug_info    0x0000000000000702      0x5f9 usb_debug_only.o
+ .debug_info    0x0000000000000cfb      0x156 print.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x0000000000000000      0x568
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x1bc Teensy_sPWM.o
+ .debug_abbrev  0x00000000000001bc      0x17f Arduino/wiring.o
+ .debug_abbrev  0x000000000000033b      0x190 usb_debug_only.o
+ .debug_abbrev  0x00000000000004cb       0x9d print.o
+
+.debug_line     0x0000000000000000      0xf3c
+ *(.debug_line)
+ .debug_line    0x0000000000000000      0x4b0 Teensy_sPWM.o
+ .debug_line    0x00000000000004b0      0x35f Arduino/wiring.o
+ .debug_line    0x000000000000080f      0x5f1 usb_debug_only.o
+ .debug_line    0x0000000000000e00      0x13c print.o
+
+.debug_frame    0x0000000000000000      0x190
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x60 Teensy_sPWM.o
+ .debug_frame   0x0000000000000060       0x70 Arduino/wiring.o
+ .debug_frame   0x00000000000000d0       0x70 usb_debug_only.o
+ .debug_frame   0x0000000000000140       0x50 print.o
+
+.debug_str      0x0000000000000000      0x42b
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x193 Teensy_sPWM.o
+                                        0x1d1 (size before relaxing)
+ .debug_str     0x0000000000000193       0x7b Arduino/wiring.o
+                                        0x149 (size before relaxing)
+ .debug_str     0x000000000000020e      0x1fb usb_debug_only.o
+                                        0x2ca (size before relaxing)
+ .debug_str     0x0000000000000409       0x22 print.o
+                                         0xe0 (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x8f2
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x132 Teensy_sPWM.o
+ .debug_loc     0x0000000000000132      0x16d Arduino/wiring.o
+ .debug_loc     0x000000000000029f      0x566 usb_debug_only.o
+ .debug_loc     0x0000000000000805       0xed print.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Teensy_sPWM.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x0000000000000000      0x118
+ .debug_ranges  0x0000000000000000       0x38 Teensy_sPWM.o
+ .debug_ranges  0x0000000000000038       0x40 Arduino/wiring.o
+ .debug_ranges  0x0000000000000078       0x70 usb_debug_only.o
+ .debug_ranges  0x00000000000000e8       0x30 print.o
+
+Cross Reference Table
+
+Symbol                                            File
+PWM_init                                          Teensy_sPWM.o
+PWM_loop                                          Teensy_sPWM.o
+__bad_interrupt                                   /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__bss_end                                         /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+__divmodsi4                                       /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+                                                  Teensy_sPWM.o
+__divsf3                                          /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+                                                  Teensy_sPWM.o
+__divsf3_pse                                      /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__divsf3x                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_clear_bss.o)
+                                                  print.o
+                                                  usb_debug_only.o
+                                                  Arduino/wiring.o
+                                                  Teensy_sPWM.o
+__do_copy_data                                    /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_copy_data.o)
+                                                  print.o
+                                                  usb_debug_only.o
+                                                  Arduino/wiring.o
+                                                  Teensy_sPWM.o
+__fixsfsi                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                                                  Teensy_sPWM.o
+__fixunssfsi                                      /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+__floatsisf                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+__floatunsisf                                     /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(floatsisf.o)
+                                                  Teensy_sPWM.o
+__fp_inf                                          /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_inf.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__fp_nan                                          /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_nan.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__fp_pscA                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__fp_pscB                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__fp_round                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_round.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3.o)
+__fp_split3                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__fp_splitA                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_split3.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+__fp_szero                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixsfsi.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(divsf3x.o)
+__fp_zero                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fp_zero.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+__heap_end                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__init                                            /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__mulsf3                                          /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                                  Teensy_sPWM.o
+__mulsf3_pse                                      /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+__mulsf3x                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/libm.a(mulsf3.o)
+__stack                                           /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__udivmodsi4                                      /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_udivmodsi4.o)
+                                                  /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_divmodsi4.o)
+__vector_1                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_10                                       usb_debug_only.o
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_11                                       usb_debug_only.o
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_12                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_13                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_14                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_15                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_16                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_17                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_18                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_19                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_2                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_20                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_21                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_22                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_23                                       Arduino/wiring.o
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_24                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_25                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_26                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_27                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_28                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_29                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_3                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_30                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_31                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_32                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_33                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_34                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_35                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_36                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_37                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_38                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_39                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_4                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_40                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_41                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_42                                       /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_5                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_6                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_7                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_8                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_9                                        /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vector_default                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+__vectors                                         /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+_exit                                             /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+delay                                             Arduino/wiring.o
+delayMicroseconds                                 Arduino/wiring.o
+exit                                              /usr/lib/gcc/avr/4.3.4/avr5/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+init                                              Arduino/wiring.o
+                                                  Teensy_sPWM.o
+main                                              Teensy_sPWM.o
+                                                  /usr/lib/gcc/avr/4.3.4/../../../avr/lib/avr5/crtm32u4.o
+micros                                            Arduino/wiring.o
+                                                  Teensy_sPWM.o
+millis                                            Arduino/wiring.o
+phex                                              print.o
+phex1                                             print.o
+phex16                                            print.o
+                                                  Teensy_sPWM.o
+print_P                                           print.o
+                                                  Teensy_sPWM.o
+set_abstract_pin_PWM                              Teensy_sPWM.o
+timer0_millis                                     Arduino/wiring.o
+timer0_overflow_count                             Arduino/wiring.o
+usb_configured                                    usb_debug_only.o
+usb_debug_flush_output                            usb_debug_only.o
+usb_debug_putchar                                 usb_debug_only.o
+                                                  print.o
+usb_init                                          usb_debug_only.o
+                                                  Teensy_sPWM.o
