@@ -1,0 +1,22 @@
+<body>
+<h1>Teensy_sPWM Reference</h1>
+
+<h2>Overview</h2>
+<p>This is a library for emulating pulse-width modulation on Teensy 2.0 and similar devices.
+
+<h2>How to use</h2>
+<p>Before doing anything else, you must call <b>PWM_init(int Hz)</b>, specifying a value for <b>Hz</b>. This will set up the library and all necessary subsystems, with pulse-width set by the frequency you specify in <b>Hz</b>.
+
+<p>You must have a program loop, in which <b>PWM_loop()</b> must be called regularly to generate the pulses. It should be called as often as possible, such as in an idle loop.
+
+<h2>Functions</h2>
+
+<h3>int PWM_init(unsigned int Hz)</h3>
+<p>Initializes Arduino library so functions like <b>millis()</b> and <b>micros()</b> can be used. Initializes variables that associate pin letters and numbers with their respective internal representations. Sets all pins to 0% PWM. Sets the pulse width to the corresponding length as specified by the <b>Hz</b> parameter.</p>
+
+<h3>void PWM_loop(void)</h3>
+<p>This function is responsible for updating pin statuses and pulse regulation. It should be called very often, ideally from a loop that runs infinitely (unless you wish to disable PWM).</p>
+
+<small>TODO: Write descriptions for other library functions...</small><br/>
+<small>Last updated 9/10/12</small>
+</body>

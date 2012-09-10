@@ -51,15 +51,15 @@ int main(void)
 	if (PWM_init(120))
 		set_pin('B', 1, 1);
 		
-	set_abstract_pin_PWM(0, 25);
-	set_pin_PWM('B', 1, 15);
+	set_abstract_pin_PWM(0, 15);
+	set_pin_PWM('B', 1, 95);
 	set_pin_PWM('F', 0, 5);
 	//set_abstract_pin_PWM(23, 15);
 	
 	//performance testing, remove this
-	/* int i = 0;
+	 int i = 0;
 	for (i = 2; i < 23; i++)
-		set_abstract_pin_PWM(i, 25); */
+		set_abstract_pin_PWM(i, 75); 
 	
 	while (1)
 	{
