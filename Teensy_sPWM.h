@@ -34,3 +34,11 @@ port: Should be a character between A and F (inclusive).
 pin: Should be an int between 0 and 7 (inclusive).
 val: Anything non-zero sets the pin high, 0 sets low. */
 static int set_pin(char charport, uint8_t pin, uint8_t val);
+
+/* Sets the usOn/usOff/usOnRemaining/usOffRemaining values for the given 
+outputPin. 
+
+abstractPin: Should be a value representing a Teensy 2.0 pin from 0 to 25.
+pwmDec: Should be a float between 0.0 and 1.0 representing PWM value. Multiply
+this value by 100 for equivalent PWM percentage. */
+static int calculate_PWM_timing(int abstractPin, float pwmDec);

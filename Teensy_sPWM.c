@@ -202,8 +202,6 @@ int set_abstract_pin_PWM(uint8_t pin, uint8_t pwmPercent)
 		return 0; //invalid percentage yo!
 
 	teensyPin[pin].pwmPercent = pwmPercent;
-	/*TODO: using a float here because it's easier for now. Do maths and use 
-	ints later because they're faster. */
 	float pwmDec;
 	pwmDec = (float)pwmPercent / 100;
 	
@@ -248,6 +246,25 @@ static int set_pin(char charport, uint8_t pin, uint8_t val)
 		// drive it high
 		*(uint8_t *)(0x22 + port * 3) |= (1 << pin);
 	}
+	
+	return 1;
+}
+
+static int calculate_PWM_timing(int abstractPin, float pwmDec)
+{
+	if (pwmDec < 0.0 || pwmDec > 1.0)
+		return 0; //invalid pwm value!
+
+	if (abstractPin < 0 || abstractPin > 25)
+		return 0;
+		
+	teensyPin[abstractPin].pwmPercent = pwmDec * 100; /*TODO: edit this when 
+	pwmPercent is changed to a float. */
+	
+	teensyPin[pin].usOn = usPulseLength * pwmDec;
+	teensyPin[pin].usOff = usPulseLength - teensyPin[pin].usOn;
+	teensyPin[pin].usOnRemaining = teensyPin[pin].usOn;
+	teensyPin[pin].usOffRemaining = teensyPin[pin].usOff;
 	
 	return 1;
 }
