@@ -1,3 +1,6 @@
+#ifndef TEENSY_SPWM
+#define TEENSY_SPWM
+
 /*  Teensy_sPWM.h
 	Copyright 2012 Brandon Foltz 
 	Released under MIT license (see license.txt)
@@ -63,4 +66,6 @@ abstractPin: Should be a value representing a Teensy 2.0 pin from 0 to 25.
 pwmDec: Should be a float between 0.0 and 1.0 representing PWM value. Multiply
 this value by 100 for equivalent PWM percentage. */
 static int set_PWM_values(uint8_t abstractPin, float pwmDec);
+
+#endif
 

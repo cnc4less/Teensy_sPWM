@@ -48,7 +48,8 @@ TARGET = Teensy_sPWM
 SRC =	$(TARGET).c \
 		Arduino/wiring.c \
 		usb_debug_only.c \
-		print.c
+		print.c \
+		test.c
 	
 # MCU name, you MUST set this to match the board you are using
 # type "make clean" after changing this, so all files will be rebuilt
