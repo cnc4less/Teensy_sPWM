@@ -21,6 +21,8 @@
 #include "usb_debug_only.h"
 #include "print.h"
 
+#define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
+
 struct PWM_pin {
 	char port;
 	char pin;
@@ -41,6 +43,8 @@ static uint32_t usPulseLength = 0;
 //here for testing. Remove when turned to a library.
 int main(void)
 {
+	CPU_PRESCALE(0);
+
 	//set up usb debugging
 	usb_init();
 	
@@ -48,21 +52,45 @@ int main(void)
 	_delay_ms(1000);
 	
 	
-	if (PWM_init(120))
+	if (PWM_init(100))
 		set_pin('B', 1, 1);
 		
 	set_abstract_pin_PWM(0, 15);
 	set_pin_PWM('B', 1, 95);
-	set_pin_PWM('F', 0, 5);
+	set_pin_PWM('F', 0, 25);
 	//set_abstract_pin_PWM(23, 15);
 	
 	//performance testing, remove this
-	 int i = 0;
+	/*int i = 0;
 	for (i = 2; i < 23; i++)
-		set_abstract_pin_PWM(i, 75); 
+		set_abstract_pin_PWM(i, 75); */
+		
+	//sweep demo!
+	int pwm = 0, i = 0;
+	int sweepDir = 1;
+	unsigned int endTime;
+	endTime = millis() + 50;
 	
 	while (1)
 	{
+	
+		if (millis() >= endTime)
+		{
+			endTime = millis() + 50;
+			if (pwm >= 100)
+				sweepDir = 0;
+			else if (pwm <= 0)
+				sweepDir = 1;
+			
+			if (sweepDir == 1)
+				pwm += 1;
+			else if (sweepDir == 0)
+				pwm -= 1;
+			
+			set_all_abstract_pins_PWM(pwm);
+			//set_pin_PWM('F', 0, pwm);
+		}
+	
 		PWM_loop();
 	}
 		
@@ -258,6 +286,34 @@ int set_abstract_pin_PWM_normalized(uint8_t pin, float normPwm)
 	else if (normPwm == 1.0)
 		set_pin(teensyPin[pin].port, teensyPin[pin].pin, 1);
 		
+	return 1;
+}
+
+int set_all_abstract_pins_PWM(uint8_t pwmPercent)
+{
+	if (pwmPercent < 0 || pwmPercent > 100)
+		return 0; //invalid percentage yo!
+
+	float pwmDec;
+	pwmDec = (float)pwmPercent / 100;
+	
+	//precalculate these values... much faster.
+	long int usOn, usOff, usOnRemaining, usOffRemaining;
+	usOn = usPulseLength * pwmDec;
+	usOff = usPulseLength - usOn;
+	usOnRemaining = usOn;
+	usOffRemaining = usOff;
+	
+	int i = 0;
+	for (i = 0; i <= 25; i++)
+	{
+		teensyPin[i].pwmPercent = pwmPercent;
+		teensyPin[i].usOn = usOn;
+		teensyPin[i].usOff = usOff;
+		teensyPin[i].usOnRemaining = usOnRemaining;
+		teensyPin[i].usOffRemaining = usOffRemaining;
+	}
+	
 	return 1;
 }
 
