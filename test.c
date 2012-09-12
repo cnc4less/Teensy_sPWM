@@ -8,16 +8,17 @@
 
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
+#define IDLE_TIMER_PRECISION 200
+
+void idle_loop(void);
+
 int main(void)
 {
 	CPU_PRESCALE(0);
-
 	//set up usb debugging
 	usb_init();
-	
 	//wait a few seconds for it to setup
 	_delay_ms(1000);
-	
 	
 	PWM_init(100);
 		
@@ -36,7 +37,6 @@ int main(void)
 	int sweepDir = 1;
 	unsigned int endTime;
 	endTime = millis() + 50;
-	
 	while (1)
 	{
 	
@@ -56,9 +56,17 @@ int main(void)
 			set_all_abstract_pins_PWM(pwm);
 			//set_pin_PWM('F', 0, pwm);
 		}
-	
-		PWM_loop();
+		idle_loop();
 	}
 		
 	return 0;
 }
+
+//static start = 0, end = 0; finishTime = 0;
+void idle_loop(void)
+{
+	/*TODO: finish writing code to calculate processor load by comparing time 
+	spent in idle loop to total runtime. */
+	PWM_loop();
+}
+

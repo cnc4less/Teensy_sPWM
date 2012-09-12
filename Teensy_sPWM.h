@@ -44,12 +44,28 @@ pin: Should be an int between 0 and 25 (inclusive).
 normPwm: Should be an float between 0.0 and 1.0 (inclusive). */
 int set_abstract_pin_PWM_normalized(uint8_t pin, float normPwm);
 
+/* Sets the PWM value for all pins. 
+
+pwmPercent: int between 0 and 100 (inclusive) */
 int set_all_abstract_pins_PWM(uint8_t pwmPercent);
 
+/* Sets the PWM value for all pins. 
+
+normPwm: float between 0.0 and 1.0 (inclusive) */
 int set_all_abstract_pins_PWM_normalized(float normPwm);
 
+/* Sets the PWM value for all pins in a given range.
+
+start: int between 0 and the number of available pins.
+end: int between 0 and the number of available pins. Must be greater than start.
+pwmPercent: int between 0 and 100 (inclusive) */
 int set_abstract_pin_range_PWM(int start, int end, uint8_t pwmPercent);
 
+/* Sets the PWM value for all pins in a given range.
+
+start: int between 0 and the number of available pins.
+end: int between 0 and the number of available pins. Must be greater than start.
+normPwm: float between 0.0 and 1.0 (inclusive) */
 int set_abstract_pin_range_PWM_normalized(int start, int end, float normPwm);
 
 /* Sets a pin high or low. 

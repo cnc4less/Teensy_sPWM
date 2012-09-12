@@ -17,6 +17,12 @@
 <h3>void PWM_loop(void)</h3>
 <p>This function is responsible for updating pin statuses and pulse regulation. It should be called very often, ideally from a loop that runs infinitely (unless you wish to disable PWM).</p>
 
+<h3>int set_pin_PWM(char port, char pin, uint8_t pwmPercent)</h3>
+<p>Sets the PWM level for a given pin. <b>port</b> should be a letter between A and F representing the port letters on the Teensy. <b>pin</b> should be an integer between 0 and 7 representing the respective pin number on a given port. <b>pwmPercent</b> is the level of PWM and should be an integer between 0 and 100. The following line would set pin B3 to PWM level of 75 percent: <pre>set_pin_PWM('B', 3, 75);</pre></p>
+
+<h3>int set_abstract_pin_PWM(char port, char pin, uint8_t pwmPercent)</h3>
+<p>Sets the PWM level for a given abstractly numbered pin. <b>pin</b> should be an integer between 0 and the number of pins on your given device, representing the respective pin number of this functions numbering convention (0 starts at upper left and goes down, continues at bottom right upwards, and then inward to the left. TODO: link or include a diagram showing pin numbering for different devices). <b>pwmPercent</b> is the level of PWM and should be an integer between 0 and 100. The following line would set pin B7 to PWM level of 75 percent, as pin B7 is abstract pin number 4: <pre>set_abstract_pin_PWM(4, 75);</pre></p>
+
 <small>TODO: Write descriptions for other library functions...</small><br/>
-<small>Last updated 9/10/12</small>
+<small>Last updated 9/12/12</small>
 </body>

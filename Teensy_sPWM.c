@@ -5,7 +5,6 @@
 	This file is part of a simple software pulse width modulation library for
 	use with Teensy and Arduino devices. */
 	
-	
 //some of these may not be necessary
 //std avr libs
 #include <avr/io.h>
@@ -34,6 +33,8 @@ struct PWM_pin {
 	long int usOffRemaining;
 };
 
+/* TODO: Declare these dynamically later to enable use on other devices with 
+differing pin numbers. */
 static struct PWM_pin teensyPin[26];
 static uint32_t usPulseLength = 0;
 
@@ -43,6 +44,8 @@ int PWM_init(unsigned int Hz)
 	usPulseLength = 1000000 / Hz;
 	
 	//go through and set all the ports and pins in abstracted order
+	/* TODO: Not sure how to implement this with other boards. Maybe use a 
+	define at build time to decide how the pins get labeled per board? */
 	teensyPin[0].port = 'B';
 	teensyPin[0].pin = 0;
 	teensyPin[1].port = 'B';
