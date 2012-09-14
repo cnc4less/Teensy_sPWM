@@ -14,7 +14,7 @@
 
 #define IDLE_TIMER_PRECISION 200
 
-#define UPDATE_MILLIS 1000
+#define UPDATE_MILLIS 250
 static long int start = 0, end = 0; endCycle = 0; idleTime = 0;
 static int load = 0;
 void idle_loop(void);
@@ -47,6 +47,7 @@ int main(void)
 	while (1)
 	{
 	
+		//FIXME: there's some bug here that causes crash/lock after ~1 minute
 		if (millis() >= endTime)
 		{
 			endTime = millis() + 50;
@@ -60,9 +61,9 @@ int main(void)
 			else if (sweepDir == 0)
 				pwm -= 1;
 			
-			set_all_abstract_pins_PWM(pwm);
-			set_pin_PWM('F', 0, 40 - load);
-			_delay_us(2000);
+			set_pin_PWM('D', 0, pwm);
+			
+			//_delay_us(2000);
 		}
 		idle_loop();
 	}
@@ -79,6 +80,8 @@ void idle_loop(void)
 		if (load > 100)
 			load = 100;
 		idleTime = 0;
+		
+		set_pin_PWM('F', 0, 40 - load); //set meter to show load
 	}
 	start = millis();
 	
