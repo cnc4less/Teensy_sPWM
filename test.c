@@ -6,15 +6,22 @@
 #include "Arduino/Arduino.h"
 #include "Teensy_sPWM.h"
 
+//debug
+#include "usb_debug_only.h"
+#include "print.h"
+
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
 #define IDLE_TIMER_PRECISION 200
 
+#define UPDATE_MILLIS 1000
+static long int start = 0, end = 0; endCycle = 0; idleTime = 0;
+static int load = 0;
 void idle_loop(void);
 
 int main(void)
 {
-	CPU_PRESCALE(0);
+	CPU_PRESCALE(0x00); //16mhz
 	//set up usb debugging
 	usb_init();
 	//wait a few seconds for it to setup
@@ -54,7 +61,8 @@ int main(void)
 				pwm -= 1;
 			
 			set_all_abstract_pins_PWM(pwm);
-			//set_pin_PWM('F', 0, pwm);
+			set_pin_PWM('F', 0, 40 - load);
+			_delay_us(2000);
 		}
 		idle_loop();
 	}
@@ -62,11 +70,23 @@ int main(void)
 	return 0;
 }
 
-//static start = 0, end = 0; finishTime = 0;
 void idle_loop(void)
 {
-	/*TODO: finish writing code to calculate processor load by comparing time 
-	spent in idle loop to total runtime. */
+	if (endCycle < millis() || endCycle == 0)
+	{
+		endCycle = millis() + UPDATE_MILLIS;
+		load = 40 * ((float)idleTime / (float)UPDATE_MILLIS);
+		if (load > 100)
+			load = 100;
+		idleTime = 0;
+	}
+	start = millis();
+	
+	/* idle loop code here */
 	PWM_loop();
+	/* idle loop code here */
+	
+	end = millis();
+	idleTime += (end - start);
 }
 

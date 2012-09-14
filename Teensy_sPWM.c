@@ -19,6 +19,15 @@
 #include "usb_debug_only.h"
 #include "print.h"
 
+#define TEENSY_2 /* We're building for the standard teensy 2.0. This should be
+defined at compile time later on. */
+
+#ifdef TEENSY_2
+	#define MAX_PINS 25
+#elif TEENSY_2++
+	#define MAX_PINS 46
+#endif
+
 struct PWM_pin {
 	char port;
 	char pin;
@@ -33,10 +42,9 @@ struct PWM_pin {
 	long int usOffRemaining;
 };
 
-/* TODO: Declare these dynamically later to enable use on other devices with 
-differing pin numbers. */
-static struct PWM_pin teensyPin[26];
+static struct PWM_pin teensyPin[MAX_PINS + 1];
 static uint32_t usPulseLength = 0;
+static uint32_t startTime = 0, endTime = 0, deltaTime = 0; //PWM_loop vars
 
 int PWM_init(unsigned int Hz)
 {
@@ -46,6 +54,7 @@ int PWM_init(unsigned int Hz)
 	//go through and set all the ports and pins in abstracted order
 	/* TODO: Not sure how to implement this with other boards. Maybe use a 
 	define at build time to decide how the pins get labeled per board? */
+	#ifdef TEENSY_2
 	teensyPin[0].port = 'B';
 	teensyPin[0].pin = 0;
 	teensyPin[1].port = 'B';
@@ -98,10 +107,11 @@ int PWM_init(unsigned int Hz)
 	teensyPin[24].pin = 5;
 	teensyPin[25].port = 'E';
 	teensyPin[25].pin = 6;	
+	#endif
 	
 	//initialize all the pins to very much off
 	int i = 0;
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= MAX_PINS; i++)
 	{
 		teensyPin[i].pwmPercent = 0;
 		teensyPin[i].usOn = 0;
@@ -114,7 +124,6 @@ int PWM_init(unsigned int Hz)
 	return 1;
 }
 
-static uint32_t startTime = 0, endTime = 0, deltaTime = 0;
 void PWM_loop(void)
 {
 	endTime = micros();
@@ -122,7 +131,7 @@ void PWM_loop(void)
 	startTime = endTime;
 	
 	int i = 0;
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= MAX_PINS; i++)
 	{		
 		if (teensyPin[i].pwmPercent > 0 && teensyPin[i].pwmPercent < 100) 
 		{
@@ -159,7 +168,7 @@ int set_pin_PWM(char port, char pin, uint8_t pwmPercent)
 		return 0;
 		
 	uint8_t i = 0;
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= MAX_PINS; i++)
 	{
 		if (teensyPin[i].port == port && teensyPin[i].pin == pin)
 		{
@@ -183,7 +192,7 @@ int set_pin_PWM_normalized(char port, char pin, float normPwm)
 		return 0;
 		
 	uint8_t i = 0;
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= MAX_PINS; i++)
 	{
 		if (teensyPin[i].port == port && teensyPin[i].pin == pin)
 		{
@@ -219,7 +228,7 @@ int set_abstract_pin_PWM_normalized(uint8_t pin, float normPwm)
 	if (normPwm < 0.0 || normPwm > 1.0)
 		return 0; //invalid pwm value!
 
-	if (pin < 0 || pin > 25)
+	if (pin < 0 || pin > MAX_PINS)
 		return 0;
 		
 	set_PWM_values(pin, normPwm);
@@ -248,7 +257,7 @@ int set_all_abstract_pins_PWM(uint8_t pwmPercent)
 	usOffRemaining = usOff;
 	
 	int i = 0;
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= MAX_PINS; i++)
 	{
 		teensyPin[i].pwmPercent = pwmPercent;
 		teensyPin[i].usOn = usOn;
@@ -297,7 +306,7 @@ static int set_PWM_values(uint8_t abstractPin, float pwmDec)
 	if (pwmDec < 0.0 || pwmDec > 1.0)
 		return 0; //invalid pwm value!
 
-	if (abstractPin < 0 || abstractPin > 25)
+	if (abstractPin < 0 || abstractPin > MAX_PINS)
 		return 0;
 		
 	teensyPin[abstractPin].pwmPercent = pwmDec * 100; /*TODO: edit this when 
