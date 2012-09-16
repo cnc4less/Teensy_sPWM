@@ -255,10 +255,20 @@ void PWM_loop(void)
 				teensyPin[i].usOffRemaining -= deltaTime;
 				if (teensyPin[i].usOffRemaining <= 0)
 				{
-					//off time has ended, so reset values
-					teensyPin[i].usOnRemaining = teensyPin[i].usOn - teensyPin[i].usOnRemaining;
-					teensyPin[i].usOffRemaining = teensyPin[i].usOff - teensyPin[i].usOffRemaining;
-					set_pin(teensyPin[i].port, teensyPin[i].pin, 1);
+					if (pwmOptions & MAKE_UP_LOST_TIME)
+					{
+						//off time has ended, so reset values
+						teensyPin[i].usOnRemaining = teensyPin[i].usOn - teensyPin[i].usOnRemaining;
+						teensyPin[i].usOffRemaining = teensyPin[i].usOff - teensyPin[i].usOffRemaining;
+						set_pin(teensyPin[i].port, teensyPin[i].pin, 1);
+					}
+					else
+					{
+						//off time has ended, so reset values
+						teensyPin[i].usOnRemaining = teensyPin[i].usOn;
+						teensyPin[i].usOffRemaining = teensyPin[i].usOff;
+						set_pin(teensyPin[i].port, teensyPin[i].pin, 1);
+					}
 				}
 			}
 		}
