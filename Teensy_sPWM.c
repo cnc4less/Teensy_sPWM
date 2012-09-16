@@ -19,7 +19,7 @@
 #include "usb_debug_only.h"
 #include "print.h"
 
-#define TEENSY_2pp /* We're building for the standard teensy 2.0. This should be
+#define TEENSY_2 /* We're building for the standard teensy 2.0. This should be
 defined at compile time later on. */
 
 #ifdef TEENSY_2
@@ -46,11 +46,13 @@ struct PWM_pin {
 static struct PWM_pin teensyPin[MAX_PINS + 1];
 static uint32_t usPulseLength = 0;
 static uint32_t startTime = 0, endTime = 0, deltaTime = 0; //PWM_loop vars
+static char pwmOptions = 0;
 
-int PWM_init(unsigned int Hz)
+int PWM_init(unsigned int Hz, char options)
 {
 	init();
 	usPulseLength = 1000000 / Hz;
+	pwmOptions = options;
 	
 	//go through and set all the ports and pins in abstracted order
 	/* TODO: Not sure how to implement this with other boards. Maybe use a 

@@ -27,7 +27,7 @@ int main(void)
 	//wait a few seconds for it to setup
 	_delay_ms(1000);
 	
-	PWM_init(100);
+	PWM_init(100, MAKE_UP_LOST_TIME);
 		
 	set_abstract_pin_PWM(0, 15);
 	set_pin_PWM('B', 1, 95);

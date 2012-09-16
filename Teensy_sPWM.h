@@ -12,7 +12,10 @@
 library and initializes variables. 
 
 Hz: sets pulse width. Eg. 100Hz = 10ms pulse width. */	
-int PWM_init(unsigned int Hz);
+enum {
+	MAKE_UP_LOST_TIME = 0x01
+	} enumOptions;
+int PWM_init(unsigned int Hz, char options);
 
 /* Loop that controls pins for PWM. Needs to be called from your programs main
 loop quite often, depending on the frequency/pulse width you set initially. */
