@@ -19,12 +19,13 @@
 #include "usb_debug_only.h"
 #include "print.h"
 
-#define TEENSY_2 /* We're building for the standard teensy 2.0. This should be
+#define TEENSY_2pp /* We're building for the standard teensy 2.0. This should be
 defined at compile time later on. */
 
 #ifdef TEENSY_2
 	#define MAX_PINS 25
-#elif TEENSY_2++
+#endif
+#ifdef TEENSY_2pp
 	#define MAX_PINS 46
 #endif
 
@@ -107,6 +108,112 @@ int PWM_init(unsigned int Hz)
 	teensyPin[24].pin = 5;
 	teensyPin[25].port = 'E';
 	teensyPin[25].pin = 6;	
+	#endif
+	#ifdef TEENSY_2pp
+	teensyPin[0].port = 'B';
+	teensyPin[0].pin = 7;
+	teensyPin[1].port = 'D';
+	teensyPin[1].pin = 0;
+	teensyPin[2].port = 'D';
+	teensyPin[2].pin = 1;
+	teensyPin[3].port = 'D';
+	teensyPin[3].pin = 2;
+	teensyPin[4].port = 'D';
+	teensyPin[4].pin = 3;
+	teensyPin[5].port = 'D';
+	teensyPin[5].pin = 4;
+	teensyPin[6].port = 'D';
+	teensyPin[6].pin = 5;
+	teensyPin[7].port = 'D';
+	teensyPin[7].pin = 6;
+	teensyPin[8].port = 'D';
+	teensyPin[8].pin = 7;
+	teensyPin[9].port = 'E';
+	teensyPin[9].pin = 0;
+	teensyPin[10].port = 'E';
+	teensyPin[10].pin = 1;
+	teensyPin[11].port = 'C';
+	teensyPin[11].pin = 0;
+	teensyPin[12].port = 'C';
+	teensyPin[12].pin = 1;
+	teensyPin[13].port = 'C';
+	teensyPin[13].pin = 2;
+	teensyPin[14].port = 'C';
+	teensyPin[14].pin = 3;
+	teensyPin[15].port = 'C';
+	teensyPin[15].pin = 4;
+	teensyPin[16].port = 'C';
+	teensyPin[16].pin = 5;
+	teensyPin[17].port = 'C';
+	teensyPin[17].pin = 6;
+	teensyPin[18].port = 'C';
+	teensyPin[18].pin = 7;
+	teensyPin[19].port = 'F';
+	teensyPin[19].pin = 7;
+	teensyPin[20].port = 'F';
+	teensyPin[20].pin = 6;
+	teensyPin[21].port = 'F';
+	teensyPin[21].pin = 5;
+	teensyPin[22].port = 'F';
+	teensyPin[22].pin = 4;
+	teensyPin[23].port = 'F';
+	teensyPin[23].pin = 3;
+	teensyPin[24].port = 'F';
+	teensyPin[24].pin = 2;
+	teensyPin[25].port = 'F';
+	teensyPin[25].pin = 1;
+	teensyPin[26].port = 'F';
+	teensyPin[26].pin = 0;
+	teensyPin[27].port = 'E';
+	teensyPin[27].pin = 6;
+	teensyPin[28].port = 'E';
+	teensyPin[28].pin = 7;
+	teensyPin[29].port = 'B';
+	teensyPin[29].pin = 0;
+	teensyPin[30].port = 'B';
+	teensyPin[30].pin = 1;
+	teensyPin[31].port = 'B';
+	teensyPin[31].pin = 2;
+	teensyPin[32].port = 'B';
+	teensyPin[32].pin = 3;
+	teensyPin[33].port = 'B';
+	teensyPin[33].pin = 4;
+	teensyPin[34].port = 'B';
+	teensyPin[34].pin = 5;
+	teensyPin[31].port = 'B';
+	teensyPin[31].pin = 6;
+	teensyPin[32].port = 'E';
+	teensyPin[32].pin = 4;
+	teensyPin[33].port = 'E';
+	teensyPin[33].pin = 5;
+	teensyPin[34].port = 'A';
+	teensyPin[34].pin = 0;
+	teensyPin[35].port = 'A';
+	teensyPin[35].pin = 1;
+	teensyPin[36].port = 'A';
+	teensyPin[36].pin = 2;
+	teensyPin[37].port = 'A';
+	teensyPin[37].pin = 3;
+	teensyPin[38].port = 'A';
+	teensyPin[38].pin = 4;
+	teensyPin[39].port = 'A';
+	teensyPin[39].pin = 5;
+	teensyPin[40].port = 'A';
+	teensyPin[40].pin = 6;
+	teensyPin[41].port = 'A';
+	teensyPin[41].pin = 7;
+	/* 46 I/O pins? well this is what I counted out...
+	teensyPin[42].port = 'F';
+	teensyPin[42].pin = 1;
+	teensyPin[43].port = 'F';
+	teensyPin[43].pin = 1;
+	teensyPin[44].port = 'F';
+	teensyPin[44].pin = 1;
+	teensyPin[45].port = 'F';
+	teensyPin[45].pin = 1;
+	teensyPin[46].port = 'F';
+	teensyPin[46].pin = 1;
+	*/
 	#endif
 	
 	//initialize all the pins to very much off
