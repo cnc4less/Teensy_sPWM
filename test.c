@@ -27,7 +27,7 @@ int main(void)
 	//wait a few seconds for it to setup
 	_delay_ms(1000);
 	
-	PWM_init(100, 0);
+	PWM_init(100, MAKE_UP_LOST_TIME);
 		
 	set_abstract_pin_PWM(0, 15);
 	set_pin_PWM('B', 1, 95);
@@ -66,6 +66,7 @@ int main(void)
 			set_pin_PWM('B', 1, pwm);
 		}
 		idle_loop();
+		//_delay_us(25);
 	}
 		
 	return 0;
@@ -76,12 +77,12 @@ void idle_loop(void)
 	if (endCycle < millis() || endCycle == 0)
 	{
 		endCycle = millis() + UPDATE_MILLIS;
-		load = 40 * ((float)idleTime / (float)UPDATE_MILLIS);
+		load = 50 * ((float)idleTime / (float)UPDATE_MILLIS);
 		if (load > 100)
 			load = 100;
 		idleTime = 0;
 		
-		set_pin_PWM('F', 0, 40 - load); //set meter to show load
+		set_pin_PWM('F', 0, 50 - load); //set meter to show load
 	}
 	start = millis();
 	

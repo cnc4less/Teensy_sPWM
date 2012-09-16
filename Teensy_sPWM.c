@@ -19,7 +19,8 @@
 #include "usb_debug_only.h"
 #include "print.h"
 
-#define TEENSY_2 /* We're building for the standard teensy 2.0. This should be
+//#define TEENSY_2 
+/* We're building for the standard teensy 2.0. This should be
 defined at compile time later on. */
 
 #ifdef TEENSY_2
