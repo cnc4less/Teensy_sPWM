@@ -71,6 +71,7 @@ int main(void)
 		
 	return 0;
 }
+#endif
 
 void idle_loop(void)
 {
