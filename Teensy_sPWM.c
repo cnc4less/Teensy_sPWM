@@ -422,6 +422,9 @@ int set_abstract_pin_range_PWM(int start, int end, uint8_t pwmPercent)
 	if (end > MAX_PINS)
 		return 0; //herp cant do that either
 
+	if (start > end)
+		return 0;
+
 	float pwmDec;
 	pwmDec = (float)pwmPercent / 100;
 	
@@ -455,6 +458,9 @@ int set_abstract_pin_range_PWM_normalized(int start, int end, float normPwm)
 
 	if (end > MAX_PINS)
 		return 0; //herp cant do that either
+
+	if (start > end)
+		return 0;
 	
 	//precalculate these values... much faster.
 	long int usOn, usOff, usOnRemaining, usOffRemaining, pwmPercent;

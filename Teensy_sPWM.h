@@ -1,12 +1,12 @@
-#ifndef TEENSY_SPWM
-#define TEENSY_SPWM
-
 /*  Teensy_sPWM.h
 	Copyright 2012 Brandon Foltz 
 	Released under MIT license (see license.txt)
 	
 	This file is part of a simple software pulse width modulation library for
 	use with Teensy and Arduino devices. */
+
+#ifndef TEENSY_SPWM
+#define TEENSY_SPWM
 
 #ifdef TEENSY_2
 	#define TEENSY_MAX_PINS 25
