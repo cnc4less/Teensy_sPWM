@@ -1,20 +1,28 @@
-#ifndef TEENSY_SPWM
-#define TEENSY_SPWM
-
 /*  Teensy_sPWM.h
 	Copyright 2012 Brandon Foltz 
 	Released under MIT license (see license.txt)
 	
 	This file is part of a simple software pulse width modulation library for
 	use with Teensy and Arduino devices. */
-	
-/* Sets up software PWM library. Runs things like init() from the Arduino
-library and initializes variables. 
 
-Hz: sets pulse width. Eg. 100Hz = 10ms pulse width. */	
+#ifndef TEENSY_SPWM
+#define TEENSY_SPWM
+
+#ifdef TEENSY_2
+	#define TEENSY_MAX_PINS 25
+#endif
+#ifdef TEENSY_2pp
+	#define TEENSY_MAX_PINS 46
+#endif
+		
 enum {
 	MAKE_UP_LOST_TIME = 0x01
 	} enumOptions;
+
+/* Sets up software PWM library. Runs things like init() from the Arduino
+library and initializes variables. 
+
+Hz: sets pulse width. Eg. 100Hz = 10ms pulse width. */
 int PWM_init(unsigned int Hz, char options);
 
 /* Loop that controls pins for PWM. Needs to be called from your programs main
