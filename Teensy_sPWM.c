@@ -303,7 +303,7 @@ int set_pin_PWM(char port, char pin, uint8_t pwmPercent)
 int set_pin_PWM_normalized(char port, char pin, float normPwm)
 {
 	if (normPwm < 0 || normPwm > 1.0)
-		return 0; //invalid percentage yo!
+		return 0; //invalid value yo!
 	
 	if (port < 'A' || port > 'F')
 		return 0;
@@ -386,6 +386,98 @@ int set_all_abstract_pins_PWM(uint8_t pwmPercent)
 		teensyPin[i].usOffRemaining = usOffRemaining;
 	}
 	
+	return 1;
+}
+
+int set_all_abstract_pins_PWM_normalized(float normPwm)
+{
+	if (normPwm < 0.0 || normPwm > 1.0)
+		return 0; //invalid value yo!
+	
+	//precalculate these values... much faster.
+	long int usOn, usOff, usOnRemaining, usOffRemaining, pwmPercent;
+	usOn = usPulseLength * normPwm;
+	usOff = usPulseLength - usOn;
+	usOnRemaining = usOn;
+	usOffRemaining = usOff;
+	pwmPercent = normPwm * 100; //wasn't I planning to remove this anyway?	
+
+	int i = 0;
+	for (i = 0; i <= MAX_PINS; i++)
+	{
+		teensyPin[i].pwmPercent = pwmPercent;
+		teensyPin[i].usOn = usOn;
+		teensyPin[i].usOff = usOff;
+		teensyPin[i].usOnRemaining = usOnRemaining;
+		teensyPin[i].usOffRemaining = usOffRemaining;
+	}
+
+	return 1;
+}
+
+int set_abstract_pin_range_PWM(int start, int end, uint8_t pwmPercent)
+{
+	if (pwmPercent < 0 || pwmPercent > 100)
+		return 0; //invalid percentage yo!
+
+	if (start < 0)
+		return 0; //herp cant do that
+
+	if (end > MAX_PINS)
+		return 0; //herp cant do that either
+
+	float pwmDec;
+	pwmDec = (float)pwmPercent / 100;
+	
+	//precalculate these values... much faster.
+	long int usOn, usOff, usOnRemaining, usOffRemaining;
+	usOn = usPulseLength * pwmDec;
+	usOff = usPulseLength - usOn;
+	usOnRemaining = usOn;
+	usOffRemaining = usOff;
+	
+	int i = 0;
+	for (i = start; i <= end; i++)
+	{
+		teensyPin[i].pwmPercent = pwmPercent;
+		teensyPin[i].usOn = usOn;
+		teensyPin[i].usOff = usOff;
+		teensyPin[i].usOnRemaining = usOnRemaining;
+		teensyPin[i].usOffRemaining = usOffRemaining;
+	}
+
+	return 1;
+}
+
+int set_abstract_pin_range_PWM_normalized(int start, int end, float normPwm)
+{
+	if (normPwm < 0.0 || normPwm > 1.0)
+		return 0; //invalid value yo!
+
+	if (start < 0)
+		return 0; //herp cant do that
+
+	if (end > MAX_PINS)
+		return 0; //herp cant do that either
+	
+	//precalculate these values... much faster.
+	long int usOn, usOff, usOnRemaining, usOffRemaining, pwmPercent;
+	usOn = usPulseLength * normPwm;
+	usOff = usPulseLength - usOn;
+	usOnRemaining = usOn;
+	usOffRemaining = usOff;
+	pwmPercent = normPwm * 100;
+	
+	int i = 0;
+	for (i = start; i <= end; i++)
+	{
+		teensyPin[i].pwmPercent = pwmPercent;
+		teensyPin[i].usOn = usOn;
+		teensyPin[i].usOff = usOff;
+		teensyPin[i].usOnRemaining = usOnRemaining;
+		teensyPin[i].usOffRemaining = usOffRemaining;
+	}
+
 	return 1;
 }
 
