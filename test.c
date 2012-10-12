@@ -12,12 +12,12 @@
 
 #define CPU_PRESCALE(n)	(CLKPR = 0x80, CLKPR = (n))
 
-#define IDLE_TIMER_PRECISION 200
-
 #define UPDATE_MILLIS 250
 static long int start = 0, end = 0; endCycle = 0; idleTime = 0;
 static int load = 0;
 void idle_loop(void);
+
+#define SWEEP_SPEED 100
 
 int main(void)
 {
@@ -29,28 +29,22 @@ int main(void)
 	
 	PWM_init(100, MAKE_UP_LOST_TIME);
 		
-	set_abstract_pin_PWM(0, 15);
+	/*set_abstract_pin_PWM(0, 15);
 	set_pin_PWM('B', 1, 95);
-	set_pin_PWM('F', 0, 25);
-	//set_abstract_pin_PWM(23, 15);
-	
-	//performance testing, remove this
-	/*int i = 0;
-	for (i = 2; i < 23; i++)
-		set_abstract_pin_PWM(i, 75); */
+	set_pin_PWM('F', 0, 25);*/
 		
 	//sweep demo!
 	int pwm = 0, i = 0;
 	int sweepDir = 1;
-	unsigned int endTime;
-	endTime = millis() + 50;
+	unsigned long int endTime;
+	endTime = millis() + SWEEP_SPEED;
 	while (1)
 	{
 	
 		//FIXME: there's some bug here that causes crash/lock after ~1 minute
 		if (millis() >= endTime)
 		{
-			endTime = millis() + 50;
+			endTime = millis() + SWEEP_SPEED;
 			if (pwm >= 100)
 				sweepDir = 0;
 			else if (pwm <= 0)
@@ -61,21 +55,22 @@ int main(void)
 			else if (sweepDir == 0)
 				pwm -= 1;
 			
-			set_pin_PWM('D', 0, pwm);
+			/*set_pin_PWM('D', 0, pwm);
 			set_pin_PWM('B', 0, pwm);
-			set_pin_PWM('B', 1, pwm);
+			set_pin_PWM('B', 1, pwm);*/
+
+			set_all_abstract_pins_PWM_normalized((float)pwm / 100);
+			//set_all_abstract_pins_PWM(pwm);
 		}
 		idle_loop();
-		//_delay_us(25);
 	}
 		
 	return 0;
 }
-//#endif
 
 void idle_loop(void)
 {
-	if (endCycle < millis() || endCycle == 0)
+	/*if (endCycle < millis() || endCycle == 0)
 	{
 		endCycle = millis() + UPDATE_MILLIS;
 		load = 50 * ((float)idleTime / (float)UPDATE_MILLIS);
@@ -84,7 +79,7 @@ void idle_loop(void)
 		idleTime = 0;
 		
 		set_pin_PWM('F', 0, 50 - load); //set meter to show load
-	}
+	}*/
 	start = millis();
 	
 	/* idle loop code here */
