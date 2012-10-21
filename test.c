@@ -29,19 +29,18 @@ int main(void)
 	
 	PWM_init(100, MAKE_UP_LOST_TIME);
 		
-	/*set_abstract_pin_PWM(0, 15);
-	set_pin_PWM('B', 1, 95);
-	set_pin_PWM('F', 0, 25);*/
-		
 	//sweep demo!
 	int pwm = 0, i = 0;
 	int sweepDir = 1;
 	unsigned long int endTime;
 	endTime = millis() + SWEEP_SPEED;
+
+	/* You'll probably note that the LED's flicker a little bit during the
+	sweep period. I'm not entirely sure why this is, I don't the think 
+	set_all_abstract_pins series of functions are particularly slow, but
+	more testing is surely required. */
 	while (1)
 	{
-	
-		//FIXME: there's some bug here that causes crash/lock after ~1 minute
 		if (millis() >= endTime)
 		{
 			endTime = millis() + SWEEP_SPEED;
@@ -59,8 +58,8 @@ int main(void)
 			set_pin_PWM('B', 0, pwm);
 			set_pin_PWM('B', 1, pwm);*/
 
-			set_all_abstract_pins_PWM_normalized((float)pwm / 100);
-			//set_all_abstract_pins_PWM(pwm);
+			//set_all_abstract_pins_PWM_normalized((float)pwm / 100);
+			set_all_abstract_pins_PWM(pwm);
 		}
 		idle_loop();
 	}
